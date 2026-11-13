@@ -52,4 +52,11 @@ class VirementServiceImplTest {
         assertThatThrownBy(() -> service.virer("A", "B", montant))
                 .isInstanceOf(IllegalArgumentException.class);
     }
+
+    // ===== V2 =====
+    @Test
+    void V2_virement_vers_le_meme_compte_refuse() {
+        assertThatThrownBy(() -> service.virer("A", "A", new BigDecimal("100")))
+                .isInstanceOf(IllegalArgumentException.class);
+    }
 }
