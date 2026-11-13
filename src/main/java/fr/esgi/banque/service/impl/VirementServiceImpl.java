@@ -25,6 +25,9 @@ public class VirementServiceImpl {
         if (montant == null || montant.signum() <= 0) {
             throw new IllegalArgumentException("Montant invalide");
         }
+        if (numeroSource.equals(numeroDestination)) {
+            throw new IllegalArgumentException("Virement vers le même compte interdit");
+        }
         return null;
     }
 }
