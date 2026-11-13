@@ -2,6 +2,7 @@ package fr.esgi.banque.business;
 
 import java.math.BigDecimal;
 
+
 /**
  * Compte bancaire avec découvert autorisé.
  *
